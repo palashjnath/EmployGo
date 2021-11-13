@@ -9,11 +9,11 @@ class JobList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.symmetric(vertical: 25),
+      margin: EdgeInsets.symmetric(vertical: 20),
       height: 200,
       child: ListView.separated(
           padding: EdgeInsets.symmetric(
-            horizontal: 25,
+            horizontal: 15,
           ),
           scrollDirection: Axis.horizontal,
           itemBuilder: (context, index) => GestureDetector(
@@ -25,7 +25,7 @@ class JobList extends StatelessWidget {
                   builder: (context) => JobDetail(jobList[index]));
             },
               child: JobItem(jobList[index])),
-          separatorBuilder: (_, index) => SizedBox(width: 15,),
+          separatorBuilder: (_, index) => SizedBox(width: 5,),
           itemCount: jobList.length),
     );
   }

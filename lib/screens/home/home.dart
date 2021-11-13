@@ -3,6 +3,7 @@ import 'package:employgo/screens/home/widgets/job_list.dart';
 import 'package:employgo/screens/home/widgets/search_card.dart';
 import 'package:employgo/screens/home/widgets/tag_list.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -22,19 +23,24 @@ class HomePage extends StatelessWidget {
             ),
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                HomeAppBar(),
-                SearchCard(),
+
+                children: [
+                  Expanded(
+                  child: ListView(
+                    children: [
+                    HomeAppBar(),
+                    SearchCard(),
                 TagList(),
                 JobList(),
+],
 
-              ],
-            )
+        ),
+        )
+         ],   )
           ],
         ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       floatingActionButton: FloatingActionButton(
-        backgroundColor: Theme.of(context).accentColor,
         elevation: 0,
         onPressed: (){},
         child: Icon(
