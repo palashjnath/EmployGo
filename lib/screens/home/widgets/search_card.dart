@@ -30,14 +30,14 @@ class SearchCard extends StatelessWidget {
               fontSize:26,
             ),),
             SizedBox(height: 10,),
-            Text('You can search quickly for\nthe job you want',
+            /*Text('You can search quickly for\nthe job you want',
             style: TextStyle(
               height: 1.8,
               color: Colors.white,
               fontWeight: FontWeight.w400,
 
-            ),),
-            SizedBox(height: 30,),
+            ),),*/
+            SizedBox(height: 40,),
             GestureDetector(
               onTap: () {
                 Navigator.of(context).push(
